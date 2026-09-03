@@ -25,7 +25,7 @@ import serial
 from flask import Flask, jsonify, render_template
 
 # ---------------- Configuration ----------------
-SERIAL_PORT = "/dev/ttyACM0"   # change if your Mega enumerates differently
+SERIAL_PORT = "/dev/ttyUSB0"   # change if your Mega enumerates differently
 BAUD_RATE = 115200              # must match Serial.begin() in the .ino
 RECONNECT_DELAY = 3             # seconds to wait before retrying a lost connection
 
