@@ -1,0 +1,14 @@
+[Unit]
+Description=CEA Environment Dashboard
+After=network.target
+
+[Service]
+# Adjust User/WorkingDirectory/ExecStart to match where you copy this folder on the Pi
+User=pi
+WorkingDirectory=/home/pi/pi_dashboard
+ExecStart=/usr/bin/python3 /home/pi/pi_dashboard/app.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
